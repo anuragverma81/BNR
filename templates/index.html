@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}BNR | Beyond Normal Reality{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <div class="eyebrow">A COMMUNITY-DRIVEN PROJECT</div>
+        <h1>BEYOND<br><span class="blue">NORMAL</span><br>REALITY.</h1>
+        <p class="hero-description">
+            A community-first meme token prototype
+            built on solana ecosystem.
+        </p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('about') }}" class="btn primary">
+                Explore BNR
+            </a>
+            <a href="{{ url_for('tokenomics') }}" class="btn secondary">
+                View Tokenomics
+            </a>
+        </div>
+        <div class="cat-art">
+            <div class="cat-glow"></div>
+            <img
+                src="{{ url_for('static',filename='images/bnr-cat.png') }}"
+                alt="BNR cat wearing futuristic headphones"
+                class="cat-mascot">
+
+            <div class="cat-caption">THE BNR SPIRIT</div>
+
+        </div>
+    </div>
+</section>
+<section class="stats">
+    <div class="stat-card">
+        <span class="stat-label">TOKEN</span>
+        <h2>{{ bnr.symbol }}</h2>
+        <p>{{ bnr.name }}</p>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label">NETWORK</span>
+        <h2>DEVNET</h2>
+        <p>Solana test network</p>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label">PROJECT STATUS</span>
+        <h2 class="status-text">Prototype</h2>
+        <p>Development in progress</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <span class="eyebrow">OUR PRINCIPLES</span>
+        <h2>More than a token.</h2>
+        <p>A project built around community,creativity and learning.</p>
+    </div>
+
+    <div class="feature-grid">
+        <article class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>Community First</h3>
+            <p>Bring people together around a shared idea.</p>
+        </article>
+        <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Build Together</h3>
+            <p>Learn,experiment and develop in public.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Think Beyond</h3>
+            <p>Explore creative possibilities with technology.</p>
+        </article>
+    </div>
+</section>
+<section class="notice">
+    <h2>Built for learning.Not speculation.</h2>
+    <p>
+        This website is demonstration project.Token information
+        will only be labelled as verified after it checked on
+        Solana Devnet.
+    </p>
+</section>
+{% endblock %}

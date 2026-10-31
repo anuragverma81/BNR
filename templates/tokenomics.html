@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}BNR Tokenomics{% endblock %}
+{% block content %}
+<section class="page-hero">
+    <span class="eyebrow">TOKEN INFORMATION</span>
+    <h1>BNR <span class="blue">Tokenomics</span></h1>
+    <p>Proposed configuration for the educational prototype.</p>
+</section>
+
+<section class="stats">
+    <div class="stat-card">
+        <span class="stat-level">TOKEN NAME</span>
+        <h2>{{ bnr.name }}</h2>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label">SYMBOL</span>
+        <h2>{{ bnr.symbol }}</h2>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-label">PROPOSED SUPPLY</span>
+        <h2>100B</h2>
+        <p>100 billion tokens</p>
+    </div>
+</section>
+<section class="content-card">
+    <h2>Prototype configuration</h2>
+
+    <ul class="info-list">
+        <li><strong>Network:</strong>Solana Devnet</li>
+        <li><strong>Token program:</strong>Original SPL Token Program(Planned)</li>
+        <li><strong>Decimals:</strong>8(planned)</li>
+        <li><strong>Supply:</strong>100,000,000,000(proposed)</li>
+        <li><strong>Mint address:</strong>Not created yet</li>
+    </ul>
+
+    <p class="warning">
+        These are proposed settings,not verified blockchain facts.
+        No token has been created by this website.
+    </p>
+</section>
+{% endblock %}
